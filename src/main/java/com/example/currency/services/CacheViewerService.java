@@ -22,7 +22,6 @@ public class CacheViewerService {
         if (cache == null) return Collections.singletonMap("error", "Cache 'currencyRates' not found");
 
         Map<String, Object> result = new HashMap<>();
-        // Spring's default cache doesn't expose all entries directly. This will work if using a custom cache (like Caffeine, EhCache, etc.)
         result.put("note", "Default cache doesn't expose all keys unless you're using a concurrent map based cache.");
         result.put("hint", "Consider using Caffeine or ConcurrentMapCache to enable introspection.");
 
